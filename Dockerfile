@@ -41,8 +41,6 @@ RUN cd /tmp/mysql-pkg && dpkg -i *.deb
 
 COPY --from=mysql /etc/mysql /etc/mysql
 
-RUN mysqld --initialize-insecure --user=mysql
-
 # ---load basic play jars------------------
 
 ADD prj /tmp/prj
